@@ -17,7 +17,7 @@ function Navigation({ categories }) { // Receive categories as a prop
       <nav>
         
         <div className="home-link"> 
-          <a href="/" data-item="Home">Home</a>
+          <a href="/product-catelog" data-item="Home">Home</a>
         </div>
 
         
@@ -34,7 +34,7 @@ function Navigation({ categories }) { // Receive categories as a prop
       </nav>
 
       <Routes basename={process.env.PUBLIC_URL}>
-        <Route path="/" element={<Homepage categories={categories} />} />
+        <Route path="/product-catelog" element={<Homepage categories={categories} />} />
         <Route path="/product/:productId" element={<ProductDetails />} />
         <Route path="/category/:categoryName" element={<CategoryPage />} />
         <Route path="/cart" element={<Cart />} />
