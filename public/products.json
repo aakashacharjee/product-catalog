@@ -1,0 +1,54 @@
+[ 
+    {
+        "id": 101,
+        "name": "Apple Iphone 15 Pro Max",
+        "category": "Mobile Phones",
+        "price": 150000,
+        "discount": 20,
+        "description": "A detailed product description",
+        "images": ["image3.jpg"],
+        "specifications": {
+          "Color": "Black",
+          "Size": "Medium" 
+        }
+    },
+    {
+      "id": 102,
+      "name": "Apple Iphone 15 Pro",
+      "category": "Mobile Phones",
+      "price": 129999,
+      "discount": 20,
+      "description": "A detailed product description",
+      "images": ["image3.jpg"],
+      "specifications": {
+        "Color": "Black",
+        "Size": "Medium" 
+      }
+    },
+    {
+        "id": 201,
+        "name": "Headphone",
+        "category": "Audio Devices",
+        "price": 999,
+        "discount": 15,
+        "description": "A detailed product description",
+        "images": ["image1.jpg"],
+        "specifications": {
+          "Color": "Black",
+          "Size": "Medium" 
+        }
+    },
+    {
+        "id": 251,
+        "name": "Earphone",
+        "category": "Audio Devices",
+        "price": 199,
+        "discount": 0,
+        "description": "A detailed product description",
+        "images": ["image2.jpg"],
+        "specifications": {
+          "Color": "Black",
+          "Size": "Medium" 
+        }
+    } 
+] 

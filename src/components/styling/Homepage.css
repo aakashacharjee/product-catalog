@@ -1,0 +1,59 @@
+.homepage {
+    background-color: #f0f0f5; /* A slight color shift for elegance */
+    padding: 40px;  /* More generous padding for visual comfort */
+    border-radius: 15px; /* Slightly stronger curve on the corners */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+    margin: 30px auto; /* Centers the homepage nicely */
+    max-width: 800px; /* Limits width on large screens for readability */
+}
+
+
+.homepage h1{
+    font-size: 2.5em; /* Adjust the font size */
+    color: #007bff; /* Change the color to a creative one */
+    text-align: center;
+    margin-bottom: 20px; /* Add some space below the welcome message */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow for effect */
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Bigger item size */
+    gap: 30px; /* Add more spacing */ 
+  }
+  
+  .category-item {
+    text-align: center;
+    border: 1px solid #eee; 
+    border-radius: 5px; /* Slightly rounded corners */
+    padding: 15px; 
+    transition: all 0.2s ease-in-out; /* For effects */
+  }
+  
+  .category-item img {
+    height: 150px;
+    width: 100%; 
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 5px; /* Match container rounding */
+  }
+  
+  .category-item:hover {
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1); /*  subtle effect */
+    transform: translateY(-3px); /* Slightly lift on hover */  
+  }
+  
+
+.category-item h2 {
+    text-decoration: none ;
+    font-size: 1.2em; /* Make slightly larger */
+    font-weight: 600; /* Medium boldness */
+    margin-top: 10px;  /* Space from image */
+    color: #333; /* A dark color for text contrast */
+}
+
+.category-item h2:hover {
+    color: #555; /* Example hover color - customize this */ 
+  }
+
+  
+  

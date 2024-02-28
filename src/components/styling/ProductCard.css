@@ -1,0 +1,45 @@
+.product-card {
+    display: flex; /* Arrange elements horizontally */
+    flex-basis: 30%; 
+    flex-direction: column; /* Stack elements vertically */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Slightly rounded corners */
+    padding: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-decoration: none; /* Remove default link underline */
+    transition: all 0.2s ease-in-out; /* Smooth transition on hover */
+    margin:10px;
+    align-items: center;
+}
+  
+  .product-card:hover {
+    transform: translateY(-3px); /* Slightly lift the card */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* More defined shadow */ 
+  }
+  
+  .product-image {
+    max-width: 100%;    /* Limit image width to container size */
+    max-height: 300px;
+    height: auto;       /* Automatically maintain aspect ratio */
+    object-fit: cover;  /* Ensure the image covers the container, cropping as needed */
+  }
+  
+  
+  .product-info { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space title and price */
+    flex-grow: 1; /* Allow info container to fill empty space */
+  }
+  
+  .product-info h3 {
+    margin: 0;
+    font-size: 1.1rem; 
+    color: #333; /* Dark text */
+  }
+  
+  .product-info .price {
+    font-weight: bold;
+    color: #007bff; /* Example price color - adjust as needed */
+  }
+  

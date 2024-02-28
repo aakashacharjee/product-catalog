@@ -1,0 +1,102 @@
+.category-page {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column; /* Or row if filters are side-by-side */
+  
+}
+
+.category-page h2 {
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.category-filters {
+  display: flex;    /* Arrange filters horizontally */
+  justify-content: space-between; /* Space between filters and button */
+  align-items: center; /* Vertically align elements */
+  margin-bottom: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px;  /* Spacing between products */
+}
+
+.category-bar {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+
+
+ /* Individual Filter Elements */
+.search-input, 
+.filter-dropdown,
+.sort-dropdown { 
+  margin: 0 15px 15px 0; /* Equal spacing */
+  
+  padding: 10px 15px;
+  border-radius: 5px; 
+  border: 1px solid #e5e5e5;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  transition: all 0.2s ease-in-out; /* For slight animation */
+}
+
+/* Hover Effect */
+.search-input:hover,
+.filter-dropdown:hover,
+.sort-dropdown:hover{ 
+  border-color: #8707ff; /* Or your desired accent color */
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.clear-button {
+  width: 150px; /* Adjust width as needed */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: #a145f6; /* A light red color */
+  border-radius: 30px;
+  color: rgb(19, 19, 19);
+  font-weight: 600;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+  padding-left: 8px; 
+}
+
+.clear-button:hover {
+  background-color: #a145f6; /* Slightly lighter red on hover */
+}
+
+.clear-button:active {
+  transform: scale(0.97);
+}
+
+.clear-icon {
+  height: 25px;
+  transition-duration: 0.5s; /* For the icon animation */
+}
+
+.clear-button:hover .clear-icon {
+  transform: rotate(120deg);  /* Adjust rotation as needed */
+}
+
+.product-grid {
+  display: flex;
+  flex-direction: column; /* Arrange products vertically */
+  flex-wrap: wrap;       /* Allow items to flow into multiple columns */
+  justify-content: center; /* Center product cards horizontally  */
+  align-items: center;    /* Center cards within each column */
+}
+

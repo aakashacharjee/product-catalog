@@ -1,0 +1,80 @@
+nav {
+    margin: 25px;
+    background: #f9f9f9;
+    padding: 16px;
+    display: flex;              /* Use flexbox for layout */
+    justify-content: space-between; /* Push elements to both sides */
+}
+
+nav .menuItems{ 
+    list-style: none;
+    display: flex;
+    margin: 0;  /* Reset default margin if needed */
+ }
+ 
+.home-link { 
+    list-style: none;
+    margin: 0; 
+  }
+
+nav .menuItems li {
+   margin: 0 25px;  /* Adjust spacing as needed */ 
+}
+
+nav .menuItems li a {
+  text-decoration: none;
+  color: #8f8f8f;
+  font-size: 24px;
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+.home-link a {
+    text-decoration: none;
+    color: #8f8f8f;
+    font-size: 24px;
+    font-weight: 400;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+nav .menuItems li a::before {
+  content: attr(data-item);
+  transition: 0.5s;
+  color: #8254ff;
+  position: absolute; 
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+}
+.home-link a::before{
+    content: attr(data-item);
+    transition: 0.5s;
+    color: #8254ff;
+    position: absolute; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+nav .menuItems li a:hover::before{
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.home-link a:hover::before {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+  
+
+
+  
