@@ -37,7 +37,7 @@ const ProductDetails = () => {
 
   const handleAddToCart = () => {
     addToCart(product);
-    navigate("/cart");
+    navigate("/product-catelog/cart");
   };
 
   const handleAddToWishlist = () => {

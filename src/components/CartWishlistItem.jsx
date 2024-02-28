@@ -27,7 +27,7 @@ const CartWishlistItem = ({
           className="img-cartwishlistitem"
           alt={item.name}
         />
-        <Link to={`/product/${item.id}`}>
+        <Link to={`/product-catelog/product/${item.id}`}>
           {" "}
           {/* Wrap the name here */}
           <h3>{item.name}</h3>

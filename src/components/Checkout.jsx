@@ -44,7 +44,7 @@ const Checkout = () => {
         // Handle the case where cart data is missing, 
         // e.g., redirect back to the cart
         console.error("Cart data not found! This shouldn't happen.");
-        navigate('/cart');  
+        navigate('/product-catelog/cart');  
       }
       
     }, [cartItems, totalPrice, navigate]);
@@ -60,7 +60,7 @@ const Checkout = () => {
 
             const timer = setTimeout(() => {
                 console.log('Navigation executed within timeout'); 
-                navigate('/');
+                navigate('/product-catelog');
                 setHasNavigated(true);
             }, 3000);
 
@@ -214,6 +214,7 @@ const Checkout = () => {
                 </div>
             )}
             <button type="submit">Submit Order</button>
+            
         </form>
         <Popup />
         </div>

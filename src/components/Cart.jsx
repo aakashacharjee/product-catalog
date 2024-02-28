@@ -23,7 +23,7 @@ const Cart = () => {
     const navigate = useNavigate();
 
     const handleBuyNowClick = () => {
-        navigate('/checkout', { state: { cartItems: cart, totalPrice: calculateTotalPrice(cart) } });
+        navigate('/product-catelog/checkout', { state: { cartItems: cart, totalPrice: calculateTotalPrice(cart) } });
     };
 
     const calculateTotalPrice = (cartItems) => {

@@ -5,7 +5,7 @@ import "./styling/ProductCard.css";
 const ProductCard = ({ product }) => {
   return (
     <Link
-      to={`/product/${product.id}`}
+      to={`/product-catelog/product/${product.id}`}
       className="product-card"
     >
       {" "}
