@@ -10,7 +10,7 @@ const Homepage = ({ categories }) => {
       <div className="category-grid">
         {categories.map((category) => (
           <Link
-            to={`/product-catelog/category/${category}`}
+            to={`/product-catalog/category/${category}`}
             key={category}
             style={{ textDecoration: "none" }}
           >

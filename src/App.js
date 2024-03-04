@@ -13,7 +13,7 @@ function App() {
       if (shouldFetch) {
         console.log("Attempting to fetch products.json");
         try {
-          const response = await fetch("/product-catelog/products.json");
+          const response = await fetch("/product-catalog/products.json");
           console.log("Response status:", response.status);
 
           if (!response.ok) {
@@ -41,7 +41,6 @@ function App() {
     <CartWishlistProvider>
       <div className="App">
         <Navigation categories={categories} />{" "}
-        {/* Pass categories to Navigation */}
       </div>
     </CartWishlistProvider>
   );

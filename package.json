@@ -2,7 +2,7 @@
   "name": "product-catalog",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aakashacharjee.github.io/product-catelog",
+  "homepage": "https://aakashacharjee.github.io/product-catalog",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",

@@ -14,21 +14,19 @@ function Navigation({ categories }) {
     <div>
       <nav>
         <div className="home-link">
-          <Link to="/product-catelog" data-item="Home">
+          <Link to="/product-catalog" data-item="Home">
             Home
           </Link>
         </div>
 
         <ul className="menuItems">
           <li>
-            {/* Use Link instead of anchor */}
-            <Link to="/product-catelog/cart" data-item="Cart">
+            <Link to="/product-catalog/cart" data-item="Cart">
               Cart
             </Link>
           </li>
           <li>
-            {/* Use Link instead of anchor */}
-            <Link to="/product-catelog/wishlist" data-item="Wishlist">
+            <Link to="/product-catalog/wishlist" data-item="Wishlist">
               Wishlist
             </Link>
           </li>
@@ -37,17 +35,20 @@ function Navigation({ categories }) {
 
       <Routes basename={process.env.PUBLIC_URL}>
         <Route
-          path="/product-catelog"
+          path="/product-catalog"
           element={<Homepage categories={categories} />}
         />
-        <Route path="/product-catelog/product/:productId" element={<ProductDetails />} />
         <Route
-          path="/product-catelog/category/:categoryName"
+          path="/product-catalog/product/:productId"
+          element={<ProductDetails />}
+        />
+        <Route
+          path="/product-catalog/category/:categoryName"
           element={<CategoryPage />}
         />
-        <Route path="/product-catelog/cart" element={<Cart />} />
-        <Route path="/product-catelog/wishlist" element={<Wishlist />} />
-        <Route path="/product-catelog/checkout" element={<Checkout />} />
+        <Route path="/product-catalog/cart" element={<Cart />} />
+        <Route path="/product-catalog/wishlist" element={<Wishlist />} />
+        <Route path="/product-catalog/checkout" element={<Checkout />} />
       </Routes>
     </div>
   );
