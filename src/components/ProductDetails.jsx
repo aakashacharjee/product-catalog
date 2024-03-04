@@ -42,7 +42,7 @@ const ProductDetails = () => {
 
   const handleAddToWishlist = () => {
     addToWishlist(product);
-    navigate("/wishlist");
+    navigate("/product-catalog/wishlist");
   };
 
   return (
