@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import CartWishlistContext from "./CartWishlistContext";
-import "./styling/ProductDetails.css";
+import CartWishlistContext from "../contexts/CartWishlistContext";
+import "../styles/pages/ProductDetailsPage.css";
 
-const ProductDetails = () => {
+const ProductDetailsPage = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -124,4 +124,4 @@ const ProductDetails = () => {
   );
 };
 
-export default ProductDetails;
+export default ProductDetailsPage;

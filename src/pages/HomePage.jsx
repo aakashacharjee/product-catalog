@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./styling/Homepage.css";
+import "../styles/pages/HomePage.css";
 import categoryImages from "../data/categoryimageConfig";
 
-const Homepage = ({ categories }) => {
+const HomePage = ({ categories }) => {
   return (
     <div className="homepage">
       <h1>Welcome to Our Catalog</h1>
@@ -35,4 +35,4 @@ const Homepage = ({ categories }) => {
   );
 };
 
-export default Homepage;
+export default HomePage;

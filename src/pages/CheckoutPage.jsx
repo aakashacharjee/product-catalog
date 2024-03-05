@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import "./styling/Checkout.css";
+import "../styles/pages/CheckoutPage.css";
 
-const Checkout = () => {
+const CheckoutPage = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,8 +21,6 @@ const Checkout = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Form Submission Triggered");
-    console.log("Setting showPopup to true"); // Log state change
     setShowPopup(true); // Show the popup
   };
 
@@ -39,7 +37,6 @@ const Checkout = () => {
   useEffect(() => {
     if (!cartItems || !totalPrice) {
       // Handle the case where cart data is missing,
-      // e.g., redirect back to the cart
       console.error("Cart data not found! This shouldn't happen.");
       navigate("/product-catalog/cart");
     }
@@ -50,12 +47,8 @@ const Checkout = () => {
     //     navigate('/');
     //   };
     let didPopupTransition = false;
-    console.log("Checkout useEffect started"); // Log on each run
     if (showPopup && !hasNavigated && !didPopupTransition) {
-      console.log("useEffect will set timeout and navigate");
-
       const timer = setTimeout(() => {
-        console.log("Navigation executed within timeout");
         navigate("/product-catalog");
         setHasNavigated(true);
       }, 3000);
@@ -67,7 +60,7 @@ const Checkout = () => {
     }
   }, [showPopup, navigate, hasNavigated]);
 
-  // The Popup component (make styling adjustments if needed)
+  // The Popup component 
   const Popup = () => (
     <div className={`popup ${showPopup ? "visible" : ""}`}>
       <div className="popup-content">
@@ -209,4 +202,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default CheckoutPage;

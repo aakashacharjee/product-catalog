@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ProductCard from "./ProductCard";
-import FilterDropdown from "./logics/FilterDropdown";
-import SortDropdown from "./logics/SortDropdown";
-import ClearFiltersButton from "./logics/ClearFilterButton";
-import "./styling/CategoryPage.css";
+import ProductCard from "../components/ProductCard";
+import FilterDropdown from "../components/utils/FilterDropdown";
+import SortDropdown from "../components/utils/SortDropdown";
+import ClearFiltersButton from "../components/utils/ClearFilterButton";
+import "../styles/pages/CategoryPage.css";
 
 const CategoryPage = () => {
   const { categoryName } = useParams();

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./styling/CartWishlistItem.css";
+import "../styles/components/CartWishlistItem.css";
 import { Link } from "react-router-dom";
-import "./styling/ProductDetails.css";
+import "../styles/pages/ProductDetailsPage.css";
 
 const CartWishlistItem = ({
   item,

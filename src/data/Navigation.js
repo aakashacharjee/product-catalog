@@ -1,13 +1,12 @@
-// Navigation.js
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import Homepage from "../components/Homepage";
-import ProductDetails from "../components/ProductDetails";
-import CategoryPage from "../components/CategoryPage";
-import Cart from "../components/Cart";
-import Wishlist from "../components/Wishlist";
-import Checkout from "../components/Checkout";
-import "./Navigation.css";
+import HomePage from "../pages/HomePage";
+import ProductDetailsPage from "../pages/ProductDetailsPage";
+import CategoryPage from "../pages/CategoryPage";
+import CartPage from "../pages/CartPage";
+import WishlistPage from "../pages/WishlistPage";
+import CheckoutPage from "../pages/CheckoutPage";
+import "../styles/Navigation.css";
 
 function Navigation({ categories }) {
   return (
@@ -36,19 +35,19 @@ function Navigation({ categories }) {
       <Routes basename={process.env.PUBLIC_URL}>
         <Route
           path="/product-catalog"
-          element={<Homepage categories={categories} />}
+          element={<HomePage categories={categories} />}
         />
         <Route
           path="/product-catalog/product/:productId"
-          element={<ProductDetails />}
+          element={<ProductDetailsPage />}
         />
         <Route
           path="/product-catalog/category/:categoryName"
           element={<CategoryPage />}
         />
-        <Route path="/product-catalog/cart" element={<Cart />} />
-        <Route path="/product-catalog/wishlist" element={<Wishlist />} />
-        <Route path="/product-catalog/checkout" element={<Checkout />} />
+        <Route path="/product-catalog/cart" element={<CartPage />} />
+        <Route path="/product-catalog/wishlist" element={<WishlistPage />} />
+        <Route path="/product-catalog/checkout" element={<CheckoutPage />} />
       </Routes>
     </div>
   );

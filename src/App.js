@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navigation from "./data/Navigation"; // Import your new component
-import { CartWishlistProvider } from "./components/CartWishlistContext";
+import { CartWishlistProvider } from "./contexts/CartWishlistContext";
 
 function App() {
   const [products, setProducts] = useState([]);

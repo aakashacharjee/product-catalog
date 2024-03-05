@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import CartWishlistContext from "./CartWishlistContext";
-import CartWishlistItem from "./CartWishlistItem";
-import "./styling/CartWishlistItem.css";
+import CartWishlistContext from "../contexts/CartWishlistContext";
+import CartWishlistItem from "../components/CartWishlistItem";
+import "../styles/components/CartWishlistItem.css";
 import { useNavigate } from "react-router-dom";
-import "./styling/CartWishlist.css";
+import "../styles/pages/CartWishlistPage.css";
 
-const Cart = () => {
+const CartPage = () => {
   const { cart, addToCartByQuantity, removeFromCart } =
     useContext(CartWishlistContext);
 
@@ -76,4 +76,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default CartPage;
