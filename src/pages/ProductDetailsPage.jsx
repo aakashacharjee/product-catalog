@@ -18,7 +18,7 @@ const ProductDetailsPage = () => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch("/product-catalog/products.json"); // Fetch your JSON file
+        const response = await fetch("/ezkart/products.json"); // Fetch the JSON file
         const data = await response.json();
 
         const foundProduct = data.find(
@@ -37,12 +37,12 @@ const ProductDetailsPage = () => {
 
   const handleAddToCart = () => {
     addToCart(product);
-    navigate("/product-catalog/cart");
+    navigate("/ezkart/cart");
   };
 
   const handleAddToWishlist = () => {
     addToWishlist(product);
-    navigate("/product-catalog/wishlist");
+    navigate("/ezkart/wishlist");
   };
 
   return (
@@ -61,7 +61,7 @@ const ProductDetailsPage = () => {
             />
             <p className="product-category">Category: {product.category}</p>
             <div adiv="price-section">
-              {product.discount > 0 && ( //Updated condition - check if discount is greater than 0
+              {product.discount > 0 && ( //Updated condition - checking if discount is greater than 0
                 <>
                   <span class="original-price">₹{product.price}</span>
                   <span class="discounted-price">

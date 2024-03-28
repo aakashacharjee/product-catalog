@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/pages/CategoryPage.css'; // Import the CSS
+import '../../styles/pages/CategoryPage.css'; 
 
 function FilterDropdown({ title, options, selected, onChange }) {
   return (

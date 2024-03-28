@@ -16,7 +16,7 @@ const CartWishlistItem = ({
   const handleQuantityDropdownChange = (event) => {
     const newQuantity = parseInt(event.target.value, 10);
     setSelectedQuantity(newQuantity);
-    onQuantityChange(item.id, newQuantity - item.quantity); // Call for adjustment
+    onQuantityChange(item.id, newQuantity - item.quantity); // Calling for adjustment
   };
 
   return (
@@ -27,9 +27,8 @@ const CartWishlistItem = ({
           className="img-cartwishlistitem"
           alt={item.name}
         />
-        <Link to={`/product-catalog/product/${item.id}`}>
+        <Link to={`/ezkart/product/${item.id}`}>
           {" "}
-          {/* Wrap the name here */}
           <h3>{item.name}</h3>
         </Link>
         {type === "cart" && (

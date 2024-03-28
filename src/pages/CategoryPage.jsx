@@ -8,15 +8,14 @@ import "../styles/pages/CategoryPage.css";
 
 const CategoryPage = () => {
   const { categoryName } = useParams();
-  const [products, setProducts] = useState([]); // Placeholder - you likely fetch this somewhere else in your app structure, so adjust accordingly
+  const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(categoryName);
   const [sortOrder, setSortOrder] = useState("desc"); // Default to descending
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
-      // You might make the same data fetch for all  products as you likely do in `App.js`, and then we will add filtering after this...
-      const response = await fetch("/product-catalog/products.json");
+      const response = await fetch("/ezkart/products.json");
       const data = await response.json();
       setProducts(data);
     };
@@ -72,7 +71,7 @@ const CategoryPage = () => {
         <ClearFiltersButton
           onClear={() => {
             setSelectedCategory("All");
-            setSortOrder("desc"); // Adjust to your default sort if needed
+            setSortOrder("desc"); 
           }}
         />
 

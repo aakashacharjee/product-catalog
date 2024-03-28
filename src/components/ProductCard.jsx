@@ -4,22 +4,17 @@ import "../styles/components/ProductCard.css";
 
 const ProductCard = ({ product }) => {
   return (
-    <Link
-      to={`/product-catalog/product/${product.id}`}
-      className="product-card"
-    >
+    <Link to={`/ezkart/product/${product.id}`} className="product-card">
       {" "}
-      {/* Navigation Link */}
       <img
         src={require(`../images/${product.images[0]}`)}
         className="product-image"
         alt={product.name}
       />{" "}
-      {/* Dynamic Image Path */}
       <div className="product-info">
         <h3>{product.name}</h3>
         <div adiv="price-section">
-          {product.discount > 0 && ( //Updated condition - check if discount is greater than 0
+          {product.discount > 0 && ( //Updated condition - checking if discount is greater than 0
             <>
               <span class="original-price">₹{product.price}</span>
               <span class="discounted-price">

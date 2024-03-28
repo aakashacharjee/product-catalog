@@ -21,7 +21,7 @@ const CheckoutPage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setShowPopup(true); // Show the popup
+    setShowPopup(true); // Showing the popup
   };
 
   const handleChange = (event) => {
@@ -32,13 +32,13 @@ const CheckoutPage = () => {
   };
 
   const location = useLocation();
-  const { cartItems, totalPrice } = location.state || {}; // Extract from location
+  const { cartItems, totalPrice } = location.state || {}; // Extracting from location
 
   useEffect(() => {
     if (!cartItems || !totalPrice) {
       // Handle the case where cart data is missing,
       console.error("Cart data not found! This shouldn't happen.");
-      navigate("/product-catalog/cart");
+      navigate("/ezkart/cart");
     }
   }, [cartItems, totalPrice, navigate]);
 
@@ -49,7 +49,7 @@ const CheckoutPage = () => {
     let didPopupTransition = false;
     if (showPopup && !hasNavigated && !didPopupTransition) {
       const timer = setTimeout(() => {
-        navigate("/product-catalog");
+        navigate("/ezkart");
         setHasNavigated(true);
       }, 3000);
 
@@ -60,7 +60,7 @@ const CheckoutPage = () => {
     }
   }, [showPopup, navigate, hasNavigated]);
 
-  // The Popup component 
+  // The Popup component
   const Popup = () => (
     <div className={`popup ${showPopup ? "visible" : ""}`}>
       <div className="popup-content">

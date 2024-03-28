@@ -27,7 +27,7 @@ export const CartWishlistProvider = ({ children }) => {
         setWishlist(storedWishlistItems);
     }, []); // Empty dependency array ensures it only runs on component mount
 
-    // Save cart and wishlist to sessionStorage whenever they change
+    // Saving cart and wishlist to sessionStorage whenever they change
     useEffect(() => {
         sessionStorage.setItem('cartItems', JSON.stringify(cart));
         sessionStorage.setItem('wishlistItems', JSON.stringify(wishlist));
@@ -39,7 +39,7 @@ export const CartWishlistProvider = ({ children }) => {
         if (cart.some((cartItem) => cartItem.id === item.id)) {
             setAlertItem(item);
             setShowAlert(true);
-            // Optional: Auto-close the popup after a few seconds
+            // Optional: Auto-closing the popup after a few seconds
             setTimeout(() => setShowAlert(false), 3000);
             return;
         } else {

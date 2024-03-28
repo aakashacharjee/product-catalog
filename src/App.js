@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Navigation from "./data/Navigation"; // Import your new component
+import Navigation from "./data/Navigation"; 
 import { CartWishlistProvider } from "./contexts/CartWishlistContext";
 
 function App() {
@@ -29,7 +29,6 @@ function App() {
           setShouldFetch(false);
         } catch (error) {
           console.error("Error fetching data:", error);
-          // Handle the error (e.g., set an error state, display a message)
         }
       }
     };

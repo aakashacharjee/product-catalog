@@ -20,7 +20,7 @@ const CategoryList = ({ products }) => {
           <div className="product-grid"> 
     {products.filter(product => product.category === category) 
         .map(product => {
-            console.log('Filtering for:', category, 'Products:', products.filter(product => product.category === category)); // INSERT HERE
+            console.log('Filtering for:', category, 'Products:', products.filter(product => product.category === category)); 
             return ( 
                 <ProductCard key={product.id} product={product} />
             ); 

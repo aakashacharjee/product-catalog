@@ -12,7 +12,6 @@ const CartPage = () => {
   const handleQuantityChange = (itemId, adjustment) => {
     const item = cart.find((cartItem) => cartItem.id === itemId);
     if (adjustment === -1 && item.quantity === 1) {
-      // Incorrect: 'item' doesn't exist here
       removeFromCart(itemId);
     } else {
       if (item) {
@@ -23,7 +22,7 @@ const CartPage = () => {
   const navigate = useNavigate();
 
   const handleBuyNowClick = () => {
-    navigate("/product-catalog/checkout", {
+    navigate("/ezkart/checkout", {
       state: { cartItems: cart, totalPrice: calculateTotalPrice(cart) },
     });
   };
@@ -42,7 +41,6 @@ const CartPage = () => {
       ) : (
         <div className="cart-items-container">
           {" "}
-          {/* Added Container */}
           {cart.map((item) => (
             <CartWishlistItem
               key={item.id}

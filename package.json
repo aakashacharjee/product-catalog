@@ -1,8 +1,8 @@
 {
-  "name": "product-catalog",
+  "name": "ezkart",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aakashacharjee.github.io/product-catalog",
+  "homepage": "https://aakashacharjee.github.io/ezkart",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",

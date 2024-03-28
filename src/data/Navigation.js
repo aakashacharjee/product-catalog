@@ -13,19 +13,19 @@ function Navigation({ categories }) {
     <div>
       <nav>
         <div className="home-link">
-          <Link to="/product-catalog" data-item="Home">
+          <Link to="/ezkart" data-item="Home">
             Home
           </Link>
         </div>
 
         <ul className="menuItems">
           <li>
-            <Link to="/product-catalog/cart" data-item="Cart">
+            <Link to="/ezkart/cart" data-item="Cart">
               Cart
             </Link>
           </li>
           <li>
-            <Link to="/product-catalog/wishlist" data-item="Wishlist">
+            <Link to="/ezkart/wishlist" data-item="Wishlist">
               Wishlist
             </Link>
           </li>
@@ -33,21 +33,18 @@ function Navigation({ categories }) {
       </nav>
 
       <Routes basename={process.env.PUBLIC_URL}>
+        <Route path="/ezkart" element={<HomePage categories={categories} />} />
         <Route
-          path="/product-catalog"
-          element={<HomePage categories={categories} />}
-        />
-        <Route
-          path="/product-catalog/product/:productId"
+          path="/ezkart/product/:productId"
           element={<ProductDetailsPage />}
         />
         <Route
-          path="/product-catalog/category/:categoryName"
+          path="/ezkart/category/:categoryName"
           element={<CategoryPage />}
         />
-        <Route path="/product-catalog/cart" element={<CartPage />} />
-        <Route path="/product-catalog/wishlist" element={<WishlistPage />} />
-        <Route path="/product-catalog/checkout" element={<CheckoutPage />} />
+        <Route path="/ezkart/cart" element={<CartPage />} />
+        <Route path="/ezkart/wishlist" element={<WishlistPage />} />
+        <Route path="/ezkart/checkout" element={<CheckoutPage />} />
       </Routes>
     </div>
   );
